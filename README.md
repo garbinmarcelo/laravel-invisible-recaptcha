@@ -1,10 +1,5 @@
 Invisible reCAPTCHA
 ==========
-![php-badge](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg)
-[![packagist-badge](https://img.shields.io/packagist/v/albertcht/invisible-recaptcha.svg)](https://packagist.org/packages/albertcht/invisible-recaptcha)
-[![Total Downloads](https://poser.pugx.org/albertcht/invisible-recaptcha/downloads)](https://packagist.org/packages/albertcht/invisible-recaptcha)
-[![travis-badge](https://api.travis-ci.org/albertcht/invisible-recaptcha.svg?branch=master)](https://travis-ci.org/albertcht/invisible-recaptcha)
-
 ![invisible_recaptcha_demo](http://i.imgur.com/1dZ9XKn.png)
 
 ## Why Invisible reCAPTCHA?
@@ -19,7 +14,7 @@ In reCAPTCHA v2, users need to click the button: "I'm not a robot" to prove they
 ## Installation
 
 ```
-composer require albertcht/invisible-recaptcha
+composer require garbinmarcelo/invisible-recaptcha
 ```
 
 ## Laravel 5
@@ -29,7 +24,7 @@ composer require albertcht/invisible-recaptcha
 Add ServiceProvider to the providers array in `app/config/app.php`.
 
 ```
-AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class,
+GarbinMarcelo\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider::class,
 ```
 
 > It also supports package discovery for Laravel 5.5.
@@ -150,7 +145,7 @@ $config['recaptcha.options'] = [
 
 In controller, use:
 ```php
-$data['captcha'] = new \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha(
+$data['captcha'] = new \GarbinMarcelo\InvisibleReCaptcha\InvisibleReCaptcha(
     $this->config->item('recaptcha.sitekey'),
     $this->config->item('recaptcha.secret'),
     $this->config->item('recaptcha.options'),
@@ -185,7 +180,7 @@ $options = [
     'timeout' => 5,
     'debug' => false
 ];
-$captcha = new \AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha($siteKey, $secretKey, $options);
+$captcha = new \GarbinMarcelo\InvisibleReCaptcha\InvisibleReCaptcha($siteKey, $secretKey, $options);
 
 // you can override single option config like this
 $captcha->setOption('debug', true);
@@ -251,21 +246,9 @@ _submitEvent = function() {
     });
 };
 ```
-## Example Repository
-Repo: https://github.com/albertcht/invisible-recaptcha-example
-
-This repo demonstrates how to use this package with ajax way.
-
-## Showcases
-
-* [Laravel Boilerplate](https://github.com/Labs64/laravel-boilerplate)
 
 ## Credits 
 
 * anhskohbo (the author of no-captcha package)
-* [Contributors](https://github.com/albertcht/invisible-recaptcha/graphs/contributors)
-
-## Support on Beerpay
-Hey dude! Help me out for a couple of :beers:!
-
-[![Beerpay](https://beerpay.io/albertcht/invisible-recaptcha/badge.svg?style=beer-square)](https://beerpay.io/albertcht/invisible-recaptcha)  [![Beerpay](https://beerpay.io/albertcht/invisible-recaptcha/make-wish.svg?style=flat-square)](https://beerpay.io/albertcht/invisible-recaptcha?focus=wish)
+* albertcht (the author of the original package)
+* [Contributors](https://github.com/garbinmarcelo/invisible-recaptcha/graphs/contributors)

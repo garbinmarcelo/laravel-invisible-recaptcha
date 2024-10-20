@@ -2,12 +2,12 @@
 
 namespace Tests;
 
-use AlbertCht\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider;
+use GarbinMarcelo\InvisibleReCaptcha\InvisibleReCaptchaServiceProvider;
 use Illuminate\Container\Container;
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\View\Compilers\BladeCompiler;
 use PHPUnit\Framework\TestCase;
-use AlbertCht\InvisibleReCaptcha\InvisibleReCaptcha;
+use GarbinMarcelo\InvisibleReCaptcha\InvisibleReCaptcha;
 
 class CaptchaTest extends TestCase
 {
