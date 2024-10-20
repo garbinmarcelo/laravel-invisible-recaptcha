@@ -1,5 +1,5 @@
 {
-    "name": "albertcht/invisible-recaptcha",
+    "name": "garbinmarcelo/invisible-recaptcha",
     "description": "Invisible reCAPTCHA For Laravel.",
     "keywords": [
         "recaptcha",
@@ -16,12 +16,16 @@
         {
             "name": "Albert Chen",
             "homepage": "https://www.albert-chen.com"
+        },
+        {
+            "name": "Marcelo Garbin",
+            "homepage": "https://garbin.dev"
         }
     ],
     "require": {
-        "php": "^5.6.4 || ^7.0 || ^8.0",
-        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0",
-        "illuminate/view": "^5.0|^6.0|^7.0|^8.0|^9.0",
+        "php": "^5.6.4 || ^7.0 || ^8.0 || ^8.1",
+        "illuminate/support": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/view": "^5.0|^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
         "guzzlehttp/guzzle": "^6.2|^7.0"
     },
     "require-dev": {
@@ -29,13 +33,13 @@
     },
     "autoload": {
         "psr-4": {
-            "AlbertCht\\InvisibleReCaptcha\\": "src/"
+            "GarbinMarcelo\\InvisibleReCaptcha\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "AlbertCht\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
+                "GarbinMarcelo\\InvisibleReCaptcha\\InvisibleReCaptchaServiceProvider"
             ]
         }
     }
