@@ -1,4 +1,4 @@
-Invisible reCAPTCHA
+Laravel Invisible reCAPTCHA
 ==========
 ![invisible_recaptcha_demo](http://i.imgur.com/1dZ9XKn.png)
 
@@ -14,7 +14,7 @@ In reCAPTCHA v2, users need to click the button: "I'm not a robot" to prove they
 ## Installation
 
 ```
-composer require garbinmarcelo/invisible-recaptcha
+composer require garbinmarcelo/laravel-invisible-recaptcha
 ```
 
 ## Laravel 5
@@ -123,80 +123,6 @@ $validate = Validator::make(Input::all(), [
 
 ```
 
-## CodeIgniter 3.x
-
-set in application/config/config.php :
-```php
-$config['composer_autoload'] = TRUE;
-```
-
-add lines in application/config/config.php :
-```php
-$config['recaptcha.sitekey'] = 'sitekey'; 
-$config['recaptcha.secret'] = 'secretkey';
-// optional
-$config['recaptcha.options'] = [
-    'hideBadge' => false,
-    'dataBadge' => 'bottomright',
-    'timeout' => 5,
-    'debug' => false
-];
-```
-
-In controller, use:
-```php
-$data['captcha'] = new \GarbinMarcelo\InvisibleReCaptcha\InvisibleReCaptcha(
-    $this->config->item('recaptcha.sitekey'),
-    $this->config->item('recaptcha.secret'),
-    $this->config->item('recaptcha.options'),
-);
-```
-
-In view, in your form:
-```php
-<?php echo $captcha->render(); ?>
-```
-
-Then back in your controller you can verify it:
-```php
-$captcha->verifyResponse($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']);
-```
-
-## Without Laravel or CodeIgniter
-
-Checkout example below:
-
-```php
-<?php
-
-require_once "vendor/autoload.php";
-
-$siteKey = 'sitekey';
-$secretKey = 'secretkey';
-// optional
-$options = [
-    'hideBadge' => false,
-    'dataBadge' => 'bottomright',
-    'timeout' => 5,
-    'debug' => false
-];
-$captcha = new \GarbinMarcelo\InvisibleReCaptcha\InvisibleReCaptcha($siteKey, $secretKey, $options);
-
-// you can override single option config like this
-$captcha->setOption('debug', true);
-
-if (!empty($_POST)) {
-    var_dump($captcha->verifyResponse($_POST['g-recaptcha-response'], $_SERVER['REMOTE_ADDR']));
-    exit();
-}
-
-?>
-
-<form action="?" method="POST">
-    <?php echo $captcha->render(); ?>
-    <button type="submit">Submit</button>
-</form>
-```
 
 ## Take Control of Submit Function
 Use this function only when you need to take all control after clicking submit button. Recaptcha validation will not be triggered if you return false in this function.
