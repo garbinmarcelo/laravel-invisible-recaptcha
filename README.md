@@ -14,7 +14,7 @@ In reCAPTCHA v2, users need to click the button: "I'm not a robot" to prove they
 ## Installation
 
 ```
-composer require garbinmarcelo/laravel-invisible-recaptcha
+composer require garbinmarcelo/invisible-recaptcha
 ```
 
 ## Laravel 5
@@ -177,4 +177,4 @@ _submitEvent = function() {
 
 * anhskohbo (the author of no-captcha package)
 * albertcht (the author of the original package)
-* [Contributors](https://github.com/garbinmarcelo/invisible-recaptcha/graphs/contributors)
+* [Contributors](https://github.com/garbinmarcelo//graphs/contributors)
